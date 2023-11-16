@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>遅延カメラアプリ</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="realtimeContainer">
+        <video id="webcam" autoplay></video>
+        <div id="realtimeLabel">現在の映像</div>
+    </div>
+    <canvas id="delayedCanvas"></canvas>
+    <div id="controls">
+        <button id="increaseDelay">1秒遅く</button>
+        <button id="decreaseDelay">1秒早く</button>
+        <p>現在の遅延時間: <span id="currentDelay">0</span> 秒</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

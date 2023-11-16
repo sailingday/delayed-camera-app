@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#realtimeContainer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 10%; /* リアルタイム映像のサイズ */
+    z-index: 2;
+}
+
+#webcam {
+    transform: scaleX(-1); /* リアルタイム映像を鏡像に */
+    width: 100%; /* コンテナに合わせて幅を調整 */
+    border: 2px solid #333;
+}
+
+#realtimeLabel {
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明の背景 */
+    color: #fff; /* 文字色 */
+    text-align: center;
+    font-size: 12px; /* 適宜調整してください */
+    padding: 2px; /* テキストのパディング */
+}
+
+#delayedCanvas {
+    transform: scaleX(-1); /* 遅延映像を鏡像に */
+    width: 70%; /* 遅延映像のサイズ */
+    height: auto; /* 高さを自動調整 */
+    z-index: 1; /* 背面に表示 */
+}
+
+#controls {
+    position: absolute; /* コントロールをページの左上に配置 */
+    top: 10px;
+    left: 10px;
+    z-index: 3; /* 最前面に表示 */
+}
+
+#controls button {
+    margin-right: 10px;
+}
